@@ -1,0 +1,10 @@
+name: 'Fresh Pulls'
+description: 'Enforce pull requests to be recently synced with master before merging'
+inputs:
+  daysFresh:
+    description: 'Number of days since a pull request was synced before it is no longer considered fresh'
+    required: false
+    default: 7
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

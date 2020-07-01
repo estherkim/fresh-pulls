@@ -1,0 +1,30 @@
+{
+  "name": "fresh-pulls",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fresh Pulls, a GitHub action",
+  "author": "estherkim",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estherkim/fresh-pulls.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build lib/*.js",
+    "all": "npm run build && npm run format && npm run lint && npm run pack"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "@zeit/ncc": "^0.22.3",
+    "eslint": "^7.3.1",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  }
+}
